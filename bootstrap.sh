@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #variables
-activatorVersion="1.2.2"
+activatorVersion="1.3.5"
 
 
 echo "Provision VM START"
@@ -23,13 +23,13 @@ wget http://downloads.typesafe.com/typesafe-activator/$activatorVersion/typesafe
 unzip -d /home/vagrant typesafe-activator-$activatorVersion-minimal.zip
 rm typesafe-activator-$activatorVersion-minimal.zip
 
-#export PATH=/home/vagrant/activator-1.2.2-minimal:$PATH >> ~/.bashrc
+#export PATH=/home/vagrant/activator-1.3.5-minimal:$PATH >> ~/.bashrc
 
-wget http://dl.bintray.com/sbt/debian/sbt-0.13.5.deb
-sudo dpkg -i sbt-0.13.5.deb
+wget http://dl.bintray.com/sbt/debian/sbt-0.13.8.deb
+sudo dpkg -i sbt-0.13.8.deb
 sudo apt-get update
 sudo apt-get install sbt
-rm sbt-0.13.5.deb
+rm sbt-0.13.8.deb
 
 #add activator to environment variables
 echo "export PATH=/home/vagrant/activator-$activatorVersion-minimal:\$PATH" >> ~/.bashrc
